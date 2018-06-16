@@ -35,7 +35,7 @@
             				<form action="/delete" method="post">
             					{{ @csrf_field() }}
             					<input type="hidden" name="id" value="{{ $d->id }}">
-            					<button type="submit" class="btn btn-danger">Delete</button>
+            					<button type="submit" class="btn btn-danger del-confirm" >Delete</button>
             				</form>
             			</td>
             		</tr>
@@ -45,4 +45,16 @@
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+$(document).ready(()=>{
+
+    $('.del-confirm').click(function(){
+
+        return confirm('Are You Sure You Want to Delete This record...!');
+    });
+
+});
+    
+</script>
 @endsection

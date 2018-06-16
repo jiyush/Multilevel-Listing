@@ -26,7 +26,13 @@ class categoryController extends Controller
 
     public function insertCategory(Request $req){
 
-    	$category = new Category;
+        $this->validate($req,array(
+
+            'category' => 'required|unique:categories,category'
+        ));
+    	
+
+        $category = new Category;
     	$category->category = $req->category;
     	$parentId = $req->parentId;
     	if ($parentId != null) {
@@ -54,7 +60,11 @@ class categoryController extends Controller
     	return view('edit')->with('cat',$cat)->with('data',$data);
     }
     public function updateCategory(Request $req){
+        $id = $req->id;
+        $this->validate($req,array(
 
+            'category' => "required|unique:categories,category,$id"
+        ));
     	$category = Category::where('id','=',$req->id)->first();
     	$category->category = $req->category;
     	$parentId = $req->parentId;

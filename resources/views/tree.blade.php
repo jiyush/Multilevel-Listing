@@ -7,12 +7,20 @@
         <div class="card-header">
             <h3>Categories in tree
 
-                <a href="/add" class="btn btn-primary float-right">Add Category</a>
-                <a href="/home" class="btn btn-primary float-right">View In Table Form</a>
+                <a href="/add" class="btn btn-primary float-right" style="margin: 0 10px">Add Category</a>  
+
+                <a href="/" class="btn btn-primary float-right" >View In Table Form</a>
             </h3>
             
         </div>
-<div id="chart_div" style="width: 500px"></div>
+            <div class="card-body">
+              
+              <div id="chart_div" style="width: 500px"></div>
+              
+            </div>
+      </div>
+    </div>
+    
 
     <script type="text/javascript">
 
