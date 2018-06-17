@@ -11,7 +11,10 @@
 |
 */
 
+Route::get('/',function(){
+  return view('auth.register');
 
+});
 
 Auth::routes();
 
@@ -21,9 +24,5 @@ Route::post('/insert','categoryController@insertCategory');
 Route::get('/edit/{id}','categoryController@editCategory');
 Route::post('/update','categoryController@updateCategory');
 Route::post('/delete','categoryController@deleteCategory');
-Route::get('/tree','categoryController@showTree');
 Route::get('/getTree','categoryController@getTree');
 
-Route::get('/test',function(){
-	return  App\Category::with('childs')->where('parentId',0)->get();
-});

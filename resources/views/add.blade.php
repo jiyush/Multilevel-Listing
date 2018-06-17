@@ -20,7 +20,7 @@
 			  <div class="col-auto my-1">
 		      
 		      <select class="custom-select mb-2" id="inlineFormCustomSelect" name="parentId">
-		        <option selected disabled>Choose Category...</option>
+		        <option selected disabled>Choose Parent Category...</option>
 		       @foreach($cat as $c)
 
 		       <option value="{{ $c->id }}">{{ $c->category }}</option>

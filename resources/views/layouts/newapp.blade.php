@@ -3,16 +3,11 @@
 <head>
 	<title></title>
     <style>
-    .google-visualization-orgchart-linenode{
-        border:0;
-    }
-
-    .google-visualization-orgchart-lineleft, .google-visualization-orgchart-linetop,
-        .google-visualization-orgchart-linebottom, 
-          .google-visualization-orgchart-lineright{
-        border:1px solid  #3388dd;
-    }
-</style>
+    
+   table.google-visualization-orgchart-table {
+            border-collapse: separate;
+        }
+    </style>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
