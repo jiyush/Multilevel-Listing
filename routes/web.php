@@ -11,10 +11,7 @@
 |
 */
 
-Route::get('/',function(){
-  return view('auth.register');
-
-});
+Route::get('/','categoryController@register');
 
 Auth::routes();
 
