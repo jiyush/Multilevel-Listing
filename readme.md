@@ -1,3 +1,14 @@
+#Before your start follow some steps
+
+1> Open cmd or terminal in project directory wrtite composer update.
+2> Copy .env.example file and create new file name .env in project directory
+3> Pass Database name.Username and password in .env file.
+4> After Fire command php artisan migrate.
+
+
+
+
+
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
