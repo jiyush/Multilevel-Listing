@@ -8,10 +8,19 @@ use App\Category;
 class categoryController extends Controller
 {
 	public function __construct()
-    {
-        $this->middleware('auth');
-    }
+	    {
+		$this->middleware('auth');
+	    }
+	public function register(){
 
+		if (Auth::check()) {
+
+		    return redirect('/home');
+		}else{
+
+		    return view('auth.register');
+		}
+	    }
     public function index()
     {        
         $data = Category::all();
